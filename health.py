@@ -37,7 +37,7 @@ logger.setLevel(logging.INFO)
 
 def get_status(self):
     if self['code'] == 0:
-        return "哎！健康打卡成了！"
+        return "已打卡~"
     elif self['code'] == 1:
         return "晚了，一切都晚了"
     elif self['code'] == -10:
