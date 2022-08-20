@@ -19,8 +19,8 @@ import requests
 # **************  作者很忙，有问题优先查阅文档最后的 Q&A  *******************
 
 mySender = "1457545893@qq.com"  # 修改1：发件人邮箱
-myToken = "xxxxx"  # 修改2：发件人邮箱授权码
-myReceiver = "xxxxx"  # 修改3：收件人邮箱，可以和发件人邮箱相同
+myToken = "vlqjxhistiltjjjf"  # 修改2：发件人邮箱授权码
+myReceiver = "1457545893@qq.com"  # 修改3：收件人邮箱，可以和发件人邮箱相同
 username = "13950390755"  # 修改4：通常是手机号
 password = "jjh2001"  # 修改5：我不看我不看
 province = "四川省"  # 修改6：魔仙堡省
@@ -156,7 +156,7 @@ class answer:
         try:
             msg = MIMEText(self.my_Name+"  "+get_status(res), 'plain', 'utf-8')
             msg['From'] = formataddr(["我在校园", self.my_sender])  # 双引号内是发件人昵称，可以自定义
-            msg['To'] = formataddr(["不爱打卡的大冤种", self.my_user])  # 双引号内是收件人邮箱昵称，可以自定义
+            msg['To'] = formataddr(["xiaois", self.my_user])  # 双引号内是收件人邮箱昵称，可以自定义
             msg['Subject'] = get_status(res)
             server = smtplib.SMTP_SSL("smtp.qq.com", 465)
             server.login(self.my_sender, self.my_pass)
